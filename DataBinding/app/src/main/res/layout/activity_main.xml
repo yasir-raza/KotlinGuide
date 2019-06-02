@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="myName" type="com.kotlin.databinding.MyName"/>
+    </data>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:id="@+id/name_text"
+                  android:layout_marginTop="20dp"
+                  android:hint="test"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_below="@id/name_text"
+                android:id="@+id/btn_name"
+                android:layout_centerHorizontal="true"
+                android:text="Click"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/nametv"
+                  android:text="@={myName.name}"
+                  android:layout_centerHorizontal="true"
+                  android:layout_below="@id/btn_name"/>
+    </RelativeLayout>
+</layout>
